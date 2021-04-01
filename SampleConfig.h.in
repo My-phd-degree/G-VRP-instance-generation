@@ -1,0 +1,6 @@
+#define SAMPLE_VERSION_MAJOR @Sample_VERSION_MAJOR@
+#define SAMPLE_VERSION_MINOR @Sample_VERSION_MINOR@
+#define SAMPLE_VERSION_PATCH @Sample_VERSION_PATCH@
+#define PROJECT_PATH "@Project_PATH@/"
+#define PROJECT_RESOURCES_PATH "@Project_PATH@/resources/"
+#define PROJECT_INSTANCES_PATH "@Project_PATH@/resources/instances/"

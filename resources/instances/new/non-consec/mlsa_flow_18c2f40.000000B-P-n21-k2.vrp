@@ -1,0 +1,32 @@
+Vehicle:
+Average speed:;51
+Time limit:;108
+Fuel comsumption rate:;1
+Fuel Capacity:;40
+Depot:
+ID;X;Y;Service Time
+0;30;40;0
+Customers:
+ID;X;Y;Service Time
+1;37;52;2
+2;49;49;2
+3;52;64;2
+4;31;62;2
+5;52;33;2
+6;42;41;2
+7;52;41;2
+8;57;58;2
+9;62;42;2
+10;42;57;2
+11;27;68;2
+13;58;48;2
+14;58;27;2
+15;37;69;2
+16;38;46;2
+17;61;33;2
+18;62;63;2
+19;63;69;2
+AFSs:
+ID;X;Y;Service Time
+12;43;67;25
+20;45;35;25
