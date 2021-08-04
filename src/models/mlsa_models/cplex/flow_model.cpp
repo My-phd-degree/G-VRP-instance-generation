@@ -9,6 +9,7 @@
 #include <queue> 
 #include <sstream> 
 #include <float.h> 
+#include <cstdlib>
 
 using namespace models::mlsa_models::cplex;
 using namespace models::gvrp_models;
@@ -245,7 +246,8 @@ void Flow_model::createGvrp_instance(){
            afsServiceTime, 
            customerServiceTime,
            routeTime;
-    int nCustomers;
+    int nCustomers,
+        K = 10;
     //get nodes
     for (const Vertex& v : instance.customers)
       if (x_vals[v.id][n - 1] > INTEGRALITY_TOL) 
@@ -259,15 +261,13 @@ void Flow_model::createGvrp_instance(){
     for (int i = 0; i < sall; ++i)
       for (int j = 0; j < sall; ++j)
         solution->vehicleAverageSpeed = max(solution->vehicleAverageSpeed, instance.distances[i][j]);
-    //customers service time
-    customerServiceTime = floor(solution->vehicleAverageSpeed / customers.size());
     //build set of customers
     for (Vertex& customer : solution->customers) {
       customersSet.insert(customer.id);
-      customer.serviceTime = customerServiceTime;
+      customer.serviceTime = instance.distances[rand()%sall][rand()%sall]/solution->vehicleAverageSpeed;
     }
     //afss service time
-    afsServiceTime = floor(solution->vehicleAverageSpeed / afss.size());
+    afsServiceTime = 1;
     for (Vertex& afs : solution->afss) 
       afs.serviceTime = afsServiceTime;
     //set time limit

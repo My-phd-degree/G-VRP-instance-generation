@@ -82,9 +82,9 @@ void Model_tests::run() {
 
 
 
-        Gvrp_feasible_solution_heuristic gvrp_feasible_solution_heuristic (*gvrp_instance);
-        Gvrp_solution gvrp_solution = gvrp_feasible_solution_heuristic.run();
-        gvrp_solution.write_in_file("./" + sol_file_name);
+//        Gvrp_feasible_solution_heuristic gvrp_feasible_solution_heuristic (*gvrp_instance);
+ //       Gvrp_solution gvrp_solution = gvrp_feasible_solution_heuristic.run();
+  //      gvrp_solution.write_in_file("./" + sol_file_name);
 
 
 
